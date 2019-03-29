@@ -1,4 +1,4 @@
-# SNES for MiSTer.
+# DE10-Standard board port of SNES on MiSTer.
 
 This is the port of [srg320's FpgaSnes](https://github.com/srg320/FpgaSnes) core.
 
