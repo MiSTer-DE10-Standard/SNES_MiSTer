@@ -12,3 +12,4 @@ copy *.rbf to root of SD card. Put some ROMs (*.SCF, *.SMC, *.BIN) into SNES fol
 * Save/Load Backup RAM.
 * Supports mouse.
 
+This project brought to you by http://www.modernhackers.com
