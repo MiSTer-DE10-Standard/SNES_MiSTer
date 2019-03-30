@@ -1,6 +1,6 @@
 //=================================================================================================
 //
-//  Minimig-AGA for DE10-standard / DE1-soc kit
+//  SNES for DE10-standard / DE1-soc kit
 //  hardware abstraction module (based on MiSTer SNES Sorgelig release 20190323)
 //  (c)2019 mazsola2k@modernhackers.com / http://www.modernhackers.com
 //
