@@ -1,7 +1,8 @@
 //=================================================================================================
 //
 //  SNES for DE10-standard / DE1-soc kit
-//  hardware abstraction module (based on MiSTer SNES Sorgelig release 20190323)
+//  hardware abstraction module (based on MiSTer SNES Sorgelig release 20190309 /
+//  92b3d7008fc3ab294a551e6d2be4cf144d35b677)
 //  (c)2019 mazsola2k@modernhackers.com / http://www.modernhackers.com
 //
 //  This program is free software; you can redistribute it and/or modify it
