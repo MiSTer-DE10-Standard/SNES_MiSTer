@@ -1,6 +1,6 @@
 //=================================================================================================
 //
-//  SNES for DE10-standard / DE1-soc kit
+//  SNES for DE10-standard
 //  hardware abstraction module (based on MiSTer SNES Sorgelig release 20190309 /
 //  92b3d7008fc3ab294a551e6d2be4cf144d35b677)
 //  (c)2019 mazsola2k@modernhackers.com / http://www.modernhackers.com
@@ -53,7 +53,7 @@ module sys_top
 	output		  AUDIO_R,
 	output		  AUDIO_SPDIF,
 	
-	//DE10-standard / DE1-soc kit implementation for on-board Wolfson WM8731 Audio DAC
+	//DE10-standard implementation for on-board Wolfson WM8731 Audio DAC
 	// Audio CODEC
 	inout wire     AUD_ADCLRCK,  // Audio CODEC ADC LR Clock
 	input wire     AUD_ADCDAT,   // Audio CODEC ADC Data
@@ -62,7 +62,7 @@ module sys_top
    inout wire     AUD_BCLK,     // Audio CODEC Bit-Stream Clock
    output wire    AUD_XCK,      // Audio CODEC Chip Clock
 	
-	//DE10-standard / DE1-soc kit implementation for on-board Wolfson WM8731 Audio DAC
+	//DE10-standard kit implementation for on-board Wolfson WM8731 Audio DAC
 	// I2C
    inout wire     I2C_SDAT,     // I2C Data
    output wire    I2C_SCLK,     // I2C Clock
@@ -814,7 +814,7 @@ alsa alsa
 	.pcm_r(alsa_r)
 );
 
-//// de10-standard / de1-soc kit audio codec i2c ////
+//// de10-standard audio codec i2c ////
 wire exchan;
 wire mix;
 assign exchan = 1'b0;
