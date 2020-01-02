@@ -77,6 +77,15 @@ module main
    output            JOY2_CLK,
    output            JOY1_P6,
    output            JOY2_P6,
+   input             JOY2_P6_in,
+
+   input             GG_EN,
+   input     [128:0] GG_CODE,
+   input             GG_RESET,
+   output            GG_AVAILABLE,
+
+   input             TURBO,
+   output            TURBO_ALLOW,
 
    output     [15:0] AUDIO_L,
    output     [15:0] AUDIO_R
@@ -158,6 +167,7 @@ SNES SNES
 	.joy2_clk(JOY2_CLK),
 	.joy1_p6(JOY1_P6),
 	.joy2_p6(JOY2_P6),
+	.joy2_p6_in(JOY2_P6_in),
 
 	.blend(BLEND),
 	.pal(PAL),
@@ -171,6 +181,13 @@ SNES SNES
 	.vde(VBLANKn),
 	.hsync(HSYNC),
 	.vsync(VSYNC),
+
+	.gg_en(GG_EN),
+	.gg_code(GG_CODE),
+	.gg_reset(GG_RESET),
+	.gg_available(GG_AVAILABLE),
+	
+	.turbo(TURBO),
 
 	.audio_l(AUDIO_L),
 	.audio_r(AUDIO_R)
@@ -474,6 +491,8 @@ SA1Map SA1Map
 `else
 assign MAP_ACTIVE[3] = 0;
 `endif
+
+assign TURBO_ALLOW = ~(MAP_ACTIVE[3] | MAP_ACTIVE[1]);
 
 always @(*) begin
 	case (MAP_ACTIVE)
